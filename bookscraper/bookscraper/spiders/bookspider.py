@@ -22,8 +22,3 @@ class BookspiderSpider(scrapy.Spider):
             else:
                 next_page_url = 'https://books.toscrape.com/catalogue/' + next_page
             yield response.follow(next_page_url, callback=self.parse)
-        
-        ##        if next_page is not None:
-           # if 'catalogue/' in next_page:
-            #    next_page_url = response.urljoin(next_page)
-             #   yield response.follow(next_page_url, callback=self.parse)
